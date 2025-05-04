@@ -1,0 +1,26 @@
+{
+  "name": "fulldevelopment",
+  "version": "1.0.0",
+  "description": "A whole development with Frame works and Raw code Base & process &Notes",
+  "keywords": [
+    "Node",
+    "React",
+    "Angular",
+    "Express",
+    "Fullstack"
+  ],
+  "license": "ISC",
+  "author": "Shaikh liyakat",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind" : "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "server":"node Server.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.5",
+    "express": "^5.1.0",
+    "tailwindcss": "^4.1.5"
+  }
+}
