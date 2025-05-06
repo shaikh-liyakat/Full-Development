@@ -15,8 +15,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind" : "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
-    "server":"node Server.js"
+    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "server": "node Server.js"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.5",
