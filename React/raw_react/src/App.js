@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import picture from './liyakat.png';
+import React from 'react';
+import "./index.css";
 
 function App() {
+    return (
+      <div className="bg-red-500">
+        <h1 className="text-orange-400 ">Tailwind + React</h1>
+      </div>
+    );
+  }
+  
+
+
+function Pic(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+
+    <div className='bg-green-400'>
+       <img className='w-20' src={picture}>
+       </img>
+     </div>
+
+
   );
 }
 
-export default App;
+export {App , Pic};
+
+
