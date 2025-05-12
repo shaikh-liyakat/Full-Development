@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App,Pic} from './App';
+import { App, Pic , Data} from './App.js';
 import "./index.css";
 
 
@@ -9,7 +9,8 @@ root.render(
   <React.StrictMode>
     <App/>
     <Pic/>
+    <Data/>
   </React.StrictMode>
-);
+); 
 
 

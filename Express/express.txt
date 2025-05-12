@@ -1,0 +1,67 @@
+Setup of Express js With node js 
+
+>>> npm install express
+
+
+//   ➡️ only for create a basic server ➡️
+
+❗note ❗
+port number always give in string 
+ex 
+port =3000;
+
+
+❗route page name by this format ❗
+"/nameofpage"
+
+ex  "/home"
+
+example function
+express.get(❗"/home"❗ ,(req,res)=>{
+    res.send("routing at home page ")
+})
+
+
+
+
+➡️ Implement different ❗Method or Functions and Modules ❗for fetching api data from server 
+
+// Types of Method
+
+
+1️⃣- ❗xhttp method❗
+
+ex
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "filename", true);
+xhttp.send();
+
+
+2️⃣ ❗fetch method❗
+
+ex 
+fetch('https://fakestoreapi.com/products/1')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+
+3️⃣  ❗Axios❗
+
+ex 
+
+const axios = require('axios'); 
+
+axios.get('https://api.example.com/data')
+    .then(response => {
+        console.log(response.data); 
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });

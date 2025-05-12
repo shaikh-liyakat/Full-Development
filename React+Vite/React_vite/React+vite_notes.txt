@@ -1,0 +1,22 @@
+//There are to ways to initialize The React App
+
+//First is Raw way by 
+npx create-react-app folder_name
+
+Ex npx create-react-app my_react_app
+
+
+//second is with vite or with different bundlers
+
+npm create vite@latest
+cd my-project-folder
+
+npm install
+npm run dev
+
+
+//        What is different 
+By raw method it is became heavy and takes times to setup all 
+with vite 
+it install or setup only required modules only 
+
