@@ -1,0 +1,10 @@
+
+Node js is ❗Multithreaded framework❗
+means we can create a multiple thread of a single Process 
+and execute them parallel or concurrently
+
+we can control this threads by worker threads modules 
+
+we also start a Process using nodejs
+
+we also start any application using nodejs 
