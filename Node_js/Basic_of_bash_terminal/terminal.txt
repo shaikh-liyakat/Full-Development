@@ -1,6 +1,6 @@
-Basic BASH terminal commands
 
 
+Basic BASH terminal commands ❓
 
 
 ls       //for listing files
@@ -60,3 +60,5 @@ rm -r  folder   //for remove folder which contain files init
 for run multiple commands
 
 mkdir Test_folder | touch file.txt      // this or | symbol
+
+

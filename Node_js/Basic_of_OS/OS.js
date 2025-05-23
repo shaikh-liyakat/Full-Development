@@ -3,5 +3,6 @@
 
 const process = require("child_process") 
 
-process.exec('"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"')
+// process.exec('"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"')
+// successful able to crate a process
 
