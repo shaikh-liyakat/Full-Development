@@ -1,5 +1,4 @@
 import picture from './liyakat.png';
-// import React from 'react';
 import "./index.css";
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
@@ -64,7 +63,6 @@ function Pic(){
 //         setLoading(false);
 //       }
 //     };
-
 //     fetchData();
 //   }, []);
 
@@ -86,34 +84,36 @@ function Pic(){
 
  
 
-function Data()
+function Data(prop)
 {
-var [  details] = useState(null);
+var [val,details] = useState(false);
 
 
   useEffect(()=>{
      
-    details = axios.get("http://localhost:4000/").then((res)=>{
+    details (axios.get("http://localhost:4000/").then((res)=>{
    
-      console.log(res.data)
-
-
-       return (details(res.data))
+     
+          val =  res.data;
+       return (val.name)
   
 
 
     }).catch((err)=>{
       console.log(err)
     })
+  )
   })
 
 return ( 
   <h1>
  Data is : {
-  details
+  val
 }
   </h1>
 )
 }
 
 export {App,Pic,Data}
+
+

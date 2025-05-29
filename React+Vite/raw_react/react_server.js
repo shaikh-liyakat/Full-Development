@@ -26,7 +26,7 @@ var data ={
 name:"ali",
 age:19,
 gender:"male",
-study:"IT Graduate"
+study:"IT UnderGraduate"
 }
 
 // console.log(data)
@@ -36,7 +36,7 @@ const chk_IP = (req,res,next)=>
         const OG_ip = "192.168.247.1";
         const oth_ip = req.ip;
 
-        if(oth_ip == OG_ip || oth_ip == "::ffff:"+ OG_ip  )
+        if(oth_ip == OG_ip || oth_ip == "::ffff:"+OG_ip  )
             {
 
                 next();
@@ -72,8 +72,11 @@ app.get(directory,(req,res)=>{
     // app.use(chk_IP(req,res));
 
     res.set('Access-Control-Allow-Origin', 'http://localhost:8080');
-    res.send(`api is \n \n +${JSON.stringify(data)}`);
-    // res.send("connected  successful");
+    // res.send(`api is \n \n +${JSON.stringify(data)}`);
+    res.send(data);
+        // console.log(data);
+
+   
     
 })
 
@@ -82,6 +85,8 @@ app.get(directory,(req,res)=>{
 app.listen(Port,()=>{
     console.log("serving");
     console.log(`http://localhost:${Port}${directory}`);
+    console.log(data);
+
 });
 
 
