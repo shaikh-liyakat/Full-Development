@@ -1,16 +1,16 @@
 import React from 'react';
+import { createRoot } from 'react-dom/client';
 import ReactDOM from 'react-dom/client';
-import { App, Pic , Data} from './App.js';
+import Card from "./props.js"
+import PassGenerator from './hooks.js';
 import "./index.css";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App/>
-    <Pic/>
-    <Data/>
-  </React.StrictMode>
-); 
+<PassGenerator/>
+// {/* <Card root={root}/>  */}
+
+)
 
 

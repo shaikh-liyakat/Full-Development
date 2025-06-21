@@ -1,25 +1,28 @@
+import React from 'react';
 import picture from './liyakat.png';
 import "./index.css";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from "axios";
+import ProductList from './props.js'; // Adjust the path as necessary
+
 
 function App() {
     return (
       <div className="bg-red-500">
-        <h1 className="text-orange-400 ">Tailwind + React</h1>
+        <h1 className="text-orange-400  text-center" >Tailwind + React</h1>
       </div>
     );
   }
   
 
-function Pic(){
-  return (
-    <div className='bg-green-400'>
-       <img className='w-20' src={picture}>
-       </img>
-     </div>
-  );
-}
+// function Pic(){
+//   return (
+//     <div className='bg-green-400'>
+//        <img className='w-20' src={picture}>
+//        </img>
+//      </div>
+//   );
+// }
 
 
 // function Req (){
@@ -95,7 +98,7 @@ var [val,details] = useState(false);
    
      
           val =  res.data;
-       return (val.name)
+          return (val.name)
   
 
 
@@ -114,6 +117,16 @@ return (
 )
 }
 
-export {App,Pic,Data}
+function App2() {
+  return (
+    <div className="App">
+      <ProductList />
+    </div>
+  );
+}
+
+// export default App;
+
+export {App2}
 
 

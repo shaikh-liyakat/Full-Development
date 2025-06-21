@@ -1,7 +1,147 @@
-/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+/* Custom styles for input outline */
+.custom-input-outline:focus {
+  outline: none;
+  border-color: #00F0FF; /* Change this to your desired outline color */
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.5); /* Glow effect */
+}
 
- 
+/* Custom styles for the slider */
+.custom-slider {
+  margin-top: 5%;
+  --thumb-color: #F8EF00;
+  --track-color: #00F0FF;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 350px; /* Ensure the slider takes full width */
+  height: 3px; /* Specify the height of the slider */
+  background: var(--track-color);
+  border-radius: 1.3px;
+}
+
+/* For WebKit browsers like Chrome and Safari */
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 20px; /* Width of the thumb */
+  height: 20px; /* Height of the thumb */
+  background: var(--thumb-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 0; /* Makes the thumb square */
+}
+
+/* For Firefox */
+.custom-slider::-moz-range-thumb {
+  width: 20px; /* Width of the thumb */
+  height: 20px; /* Height of the thumb */
+  background: var(--thumb-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 0; /* Makes the thumb square */
+}
+
+/* Track styling for Firefox */
+.custom-slider::-moz-range-track {
+  width: 350px;
+  height: 3px;
+  background: var(--track-color);
+  border-radius: 1.3px;
+}
+
+
+/* checkbox css */
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color:transparent;
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color:transparent;
+  margin: 0;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+}
+
+input[type="checkbox"] {
+  /* ...existing styles */
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 1em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"] {
+  /* ...existing styles */
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.75rem;
+  height: 1rem;
+  background-color:#F8EF00;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+#generate_pass
+{
+
+  transition: ease-in-out 0.5s;
+}
+
+
+#generate_pass:hover
+{
+
+  background-color: #00F0FF;
+  filter: drop-shadow(5px 6px 5px #00F0FF);
+  transform: translateY(-3px);
+
+}
+
+
+#copy_pass
+{
+    transition: ease-in-out 0.5s;
+
+}
+
+
+#copy_pass:hover
+{
+
+  background-color: #00F0FF;
+  filter: drop-shadow(5px 6px 5px #00F0FF);
+  transform: translateY(-3px);
+
+}
